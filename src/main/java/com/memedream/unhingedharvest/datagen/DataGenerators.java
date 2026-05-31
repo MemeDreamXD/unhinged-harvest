@@ -27,7 +27,6 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(UHBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
-
         generator.addProvider(event.includeClient(), new UHItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new UHBlockStateProvider(packOutput, existingFileHelper));
 

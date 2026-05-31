@@ -19,6 +19,10 @@ public class UHCreativeModeTabs {
                     .icon(() -> new ItemStack(UHItems.CORN.get()))
                     .title(Component.translatable("creativetab.unhinged_harvest.items"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(UHBlocks.MELON_PULP);
+                        output.accept(UHBlocks.MELON_RIND);
+                        output.accept(UHBlocks.DARK_MELON_RIND);
+                        output.accept(UHBlocks.PALE_MELON_RIND);
                         output.accept(UHItems.CORN);
                         output.accept(UHItems.CORN_SEEDS);
                     }).build());

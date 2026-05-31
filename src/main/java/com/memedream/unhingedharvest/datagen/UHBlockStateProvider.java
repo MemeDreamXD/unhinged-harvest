@@ -23,6 +23,7 @@ public class UHBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         makeCrop(((CropBlock) UHBlocks.CORN_CROP.get()),
         "corn_crop_stage", "corn_crop_stage");
+        blockWithItem(UHBlocks.MELON_PULP);
 
     }
     //Generic Block
@@ -36,6 +37,7 @@ public class UHBlockStateProvider extends BlockStateProvider {
 
         getVariantBuilder(block).forAllStates(function);
     }
+
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),

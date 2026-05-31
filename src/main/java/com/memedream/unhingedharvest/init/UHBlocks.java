@@ -6,6 +6,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HugeMushroomBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -20,6 +21,14 @@ public class UHBlocks {
 
     public static final DeferredBlock<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final DeferredBlock<Block> MELON_PULP = registerBlock("melon_pulp",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON)));
+    public static final DeferredBlock<Block> MELON_RIND = registerBlock("melon_rind",
+            () -> new HugeMushroomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON)));
+    public static final DeferredBlock<Block> DARK_MELON_RIND = registerBlock("melon_rind",
+            () -> new HugeMushroomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON)));
+    public static final DeferredBlock<Block> PALE_MELON_RIND = registerBlock("melon_rind",
+            () -> new HugeMushroomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
